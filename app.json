@@ -10,7 +10,10 @@
     "backgroundColor": "#0C0C0F",
     "ios": {
       "bundleIdentifier": "com.olivier9925.sixdegreesofcinema",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "com.sixdegrees.cinema",
