@@ -66,9 +66,18 @@ Les données sont attribuées à TMDB dans l’onglet Règles. Avant toute diffu
 
 ## Builds EAS
 
-Les profils `development`, `preview` et `production` sont déclarés dans `eas.json`. Le profil `development` produit un development build iOS pour simulateur. Le projet est lié au compte Expo `olivier9925`.
+Les profils `development`, `preview` et `production` sont déclarés dans `eas.json`. Le profil `development` produit un development build iOS pour simulateur ; `production` produit le binaire destiné à App Store Connect et incrémente le numéro de build distant. Le projet est lié au compte Expo `olivier9925`.
 
 L’identifiant iOS `com.olivier9925.sixdegreesofcinema` est enregistré dans Apple Developer et associé à la fiche App Store Connect. Le package Android reste `com.sixdegrees.cinema`.
+
+Après connexion à EAS (`npx eas-cli@latest login`) et configuration des identifiants de signature Apple (`npx eas-cli@latest credentials --platform ios`), les commandes iOS sont :
+
+```sh
+npm run eas:build:ios
+npm run eas:submit:ios
+```
+
+Pour construire puis envoyer automatiquement le build, utilise `npm run eas:release:ios`. La première soumission peut demander de sélectionner l’app ou de configurer une clé App Store Connect. L’envoi à App Store Connect ne soumet pas automatiquement l’app à la revue publique ; cette étape se fait dans App Store Connect.
 
 ## Instructions pour les agents IA
 
