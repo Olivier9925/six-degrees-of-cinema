@@ -14,6 +14,12 @@ export default function RulesScreen() {
         <Text style={styles.number}>01</Text>
         <Text style={styles.stepText}>Acteur → film → acteur = une liaison.</Text>
       </View>
+      <View style={styles.credit}>
+        <Text style={styles.creditTitle}>Sources des données</Text>
+        <Text style={styles.creditText}>
+          Les données de films, les portraits et les affiches proviennent de TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.
+        </Text>
+      </View>
     </View>
   );
 }
@@ -26,4 +32,7 @@ const styles = StyleSheet.create({
   step: { alignItems: 'center', backgroundColor: '#19191E', borderColor: '#2A2A32', borderRadius: 18, borderWidth: 1, flexDirection: 'row', gap: 16, marginTop: 36, padding: 20 },
   number: { color: '#FF3256', fontSize: 18, fontWeight: '900' },
   stepText: { color: '#FFFFFF', flex: 1, fontSize: 15, fontWeight: '600', lineHeight: 22 },
+  credit: { backgroundColor: '#19191E', borderColor: '#2A2A32', borderRadius: 18, borderWidth: 1, marginTop: 18, padding: 18 },
+  creditTitle: { color: '#FFFFFF', fontSize: 14, fontWeight: '800', marginBottom: 8 },
+  creditText: { color: '#A6A6B2', fontSize: 12, lineHeight: 19 },
 });
